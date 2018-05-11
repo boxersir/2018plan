@@ -2,7 +2,9 @@
 ①canvas
 
 ②webp
+var isSupportWebp = !![].map && document.createElement('canvas').toDataURL('image/webp').indexOf('data:image/webp') == 0;
 
+console.log(isSupportWebp);   // true or false
 ③vue
 
 
@@ -10,3 +12,21 @@
 
 
 ⑤gulp
+
+
+⑥
+原生特性 减少代码
+@font-face {
+  font-family: YH;
+  src: local("microsoft yahei");
+}
+
+.font {
+    font-family: YH;
+}
+
+@font-face {
+  font-family: BASE;
+  src: local('PingFang SC'),
+       local("Microsoft Yahei");
+}
